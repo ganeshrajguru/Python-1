@@ -39,3 +39,7 @@ def test_map():
     assert_equal(start.go('west').go('east'), start)
     assert_equal(start.go('down').go('up'), start)
 
+
+def test_dummy():
+    newroom = Room("Bed Room", "Find a bed here")
+    assert_equal(newroom.name, "BedRoom")
