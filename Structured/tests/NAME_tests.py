@@ -38,18 +38,3 @@ def test_map():
     assert_equal(start.go('west'), west)
     assert_equal(start.go('west').go('east'), start)
     assert_equal(start.go('down').go('up'), start)
-
-
-def test_map_1():
-    start = Room("Start", "You start your journey from here.")
-    west = Room("West", "You have moved westwards. Turn East for greener pastures!!")
-    bottom = Room("Bottom", "You just hit rock bottom. Nowhere to go but up!!")
-
-    start.add_paths({'west': west, 'down': bottom})
-    west.add_paths({'east': start})
-    bottom.add_paths({'up': start})
-
-    assert_equal(start.go('west'), west)
-    assert_equal(start.go('west').go('east'), start)
-    assert_equal(start.go('down').go('up'), start)
-    assert_equal(start.go('down').go('up'), start)
