@@ -52,4 +52,4 @@ def test_map_1():
     assert_equal(start.go('west'), west)
     assert_equal(start.go('west').go('east'), start)
     assert_equal(start.go('down').go('up'), start)
-
+    assert_equal(start.go('down').go('up'), start)
